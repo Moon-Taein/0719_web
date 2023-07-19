@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>0719_1</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>a.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 사용할 서블릿 등록 -->
+  <servlet>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<servlet-class>my.MyFirstServlet</servlet-class>
+  </servlet>
+  
+  <!-- 등록한 서블릿을 url 매핑 해주기 -->
+  <servlet-mapping>
+  	<servlet-name>MyFirstServlet</servlet-name>
+  	<url-pattern>/my</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 사용할 서블릿 등록 -->
+  <servlet>
+  	<servlet-name>MyPage</servlet-name>
+  	<servlet-class>my.MyPageServlet</servlet-class>
+  </servlet>
+  
+  <!-- 등록한 서블릿을 url 매핑 해주기 -->
+  <servlet-mapping>
+  	<servlet-name>MyPage</servlet-name>
+  	<url-pattern>/page</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 사용할 서블릿 등록 -->
+  <!-- 톰캣은 페이지를 요청했을때 서블릿 인스턴스를 생성한다 -->
+  <!-- 싱클톤 패턴 하나의 인스턴스를 계속 사용함 -->
+  <servlet>
+  	<servlet-name>TestInit</servlet-name>
+  	<servlet-class>my.TestInitServlet</servlet-class>
+  	<init-param>
+  		<param-name>param1</param-name>
+  		<param-value>value1</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>param2</param-name>
+  		<param-value>value2</param-value>
+  	</init-param>
+  </servlet>
+  
+  <!-- 등록한 서블릿을 url 매핑 해주기 -->
+  <servlet-mapping>
+  	<servlet-name>TestInit</servlet-name>
+  	<url-pattern>/init</url-pattern>
+  </servlet-mapping>
+  
+  <!-- load on startup -> 어플리케이션 시작할때 서블릿 생성 -->
+  <servlet>
+  	<servlet-name>StartServlet</servlet-name>
+  	<servlet-class>my.TestStartServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <!-- 사용할 서블릿 등록 -->
+  <servlet>
+  	<servlet-name>TodayForm</servlet-name>
+  	<servlet-class>my.TodayFormServlet</servlet-class>
+  </servlet>
+  
+  <!-- 등록한 서블릿을 url 매핑 해주기 -->
+  <servlet-mapping>
+  	<servlet-name>TodayForm</servlet-name>
+  	<url-pattern>/today</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 사용할 서블릿 등록 -->
+  <servlet>
+  	<servlet-name>NameAge</servlet-name>
+  	<servlet-class>servlet.NameAgeServlet</servlet-class>
+  </servlet>
+  
+  <!-- 등록한 서블릿을 url 매핑 해주기 -->
+  <servlet-mapping>
+  	<servlet-name>NameAge</servlet-name>
+  	<url-pattern>/nameage</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -5,6 +5,7 @@
 <%
 	request.setCharacterEncoding("utf-8");
 %>
+<!-- 객체 매핑 -->
 <jsp:useBean id="message" class="guestbook.model.Message">
 	<jsp:setProperty name="message" property="*" />
 </jsp:useBean>
