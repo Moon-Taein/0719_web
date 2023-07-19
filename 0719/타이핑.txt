@@ -1,0 +1,21 @@
+라이브러리 추가
+418 - 419 > DBCPInit.java
+	39번째 line 데이터베이스 이름적어주세요. 아이디 비밀번호도.
+	64번째 line "chap14" -> "***아무이름이나"
+
+
+421p 상단 <sevlet> 태그 적혀있는거 -> web.xml에 추가
+434 - 435 > JdbcUtil.java
+442 - 443 > ConnectionProvider.java
+	11번째 line guestbook -->> "***위에서 정한 이름으로"
+
+
+446 > 데이터베이스 테이블 생성
+448 - 449 > Message.java
+450 - 452 > MessageDao.java
+455 - 456 > MessageListView.java
+457 - 458 > GetMesaageListService.java
+458 - 459 > WriteMessageService.java
+460 - 461 > DeleteMessageService.java
+454, 461 - 462 > 예외 클래스 3개
+462 - 467 > jsp 페이지들
